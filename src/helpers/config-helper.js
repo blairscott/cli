@@ -7,7 +7,6 @@ import helpers from './index';
 import getYArgs from '../core/yargs';
 
 const args = getYArgs().argv;
-helpers.view.log("here are the args", args);
 
 const api = {
   config: undefined,
@@ -48,7 +47,7 @@ const api = {
   },
   getConfigFile() {
     if (args.config) {
-      helpers.view.log('getConfigFile args.config', args.config);
+      helpers.view.log('getConfigFile args', args);
       return path.resolve(process.cwd(), args.config);
     }
 
