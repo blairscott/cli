@@ -115,6 +115,9 @@ const api = {
     if (!api.config) {
       const env = helpers.generic.getEnvironment();
 
+      helpers.view.log("Oh no");
+      helpers.view.log(api);
+
       if (api.rawConfig === undefined) {
         throw new Error(
           'Error reading "' +
