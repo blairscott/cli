@@ -50,10 +50,10 @@ const api = {
       return path.resolve(process.cwd(), args.config);
     }
 
-    console.log('getConfigFile');
+    helpers.view.log('getConfigFile');
 
     const defaultPath = path.resolve(process.cwd(), 'config', 'config.json');
-    console.log('getConfigFile defaultPath', defaultPath, process.cwd());
+    helpers.view.log('getConfigFile defaultPath ' + defaultPath + ' ' + process.cwd());
     const alternativePath = defaultPath.replace('.json', '.js');
 
     return helpers.path.existsSync(alternativePath)
