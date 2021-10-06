@@ -7,6 +7,7 @@ import helpers from './index';
 import getYArgs from '../core/yargs';
 
 const args = getYArgs().argv;
+helpers.view.log("here are the args", args);
 
 const api = {
   config: undefined,
