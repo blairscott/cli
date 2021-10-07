@@ -48,6 +48,7 @@ const api = {
   getConfigFile() {
     if (args.config) {
       helpers.view.log('getConfigFile args', args);
+      helpers.view.log('getConfigFile retVal', path.resolve(process.cwd(), args.config));
       return path.resolve(process.cwd(), args.config);
     }
 
