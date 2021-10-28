@@ -52,6 +52,9 @@ export async function getMigrator(type, args) {
     },
   });
 
+  helpers.view.log('Time to authenticate');
+
+
   return sequelize
     .authenticate()
     .then(() => {
