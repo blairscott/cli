@@ -172,6 +172,7 @@ const api = {
 
       api.config = api.rawConfig;
     }
+    helpers.view.log('Returning config');
     return api.config;
   },
 

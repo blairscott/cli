@@ -69,6 +69,7 @@ export function ensureCurrentMetaSchema(migrator) {
   const queryInterface = migrator.options.storageOptions.sequelize.getQueryInterface();
   const tableName = migrator.options.storageOptions.tableName;
   const columnName = migrator.options.storageOptions.columnName;
+  helpers.view.log('ensureCurrentMetaSchema');
 
   return ensureMetaTable(queryInterface, tableName)
     .then((table) => {

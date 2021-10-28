@@ -88,6 +88,7 @@ function migrate(args) {
 function migrationStatus(args) {
   return getMigrator('migration', args)
     .then((migrator) => {
+      helpers.view.log('Got migrator');
       return ensureCurrentMetaSchema(migrator)
         .then(() => migrator.executed())
         .then((migrations) => {
