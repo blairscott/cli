@@ -43,6 +43,7 @@ exports.handler = async function (args) {
 function migrate(args) {
   return getMigrator('migration', args)
     .then((migrator) => {
+      helpers.view.log("Got migrator");
       return ensureCurrentMetaSchema(migrator)
         .then(() => migrator.pending())
         .then((migrations) => {
